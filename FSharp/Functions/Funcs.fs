@@ -57,7 +57,7 @@ let harmonicMean x y = (1.0/ ((1.0/x) + (1.0/y)))
 // copy of the string.
 let rec repeatString str N =
     if N > 1 then
-        str + (repeatString str (N - 1))
+        str + "," + (repeatString str (N - 1))
     else
         str
 
