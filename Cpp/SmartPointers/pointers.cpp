@@ -22,6 +22,14 @@ int main() {
    }
 }
 
+void Leak() {
+   int *pi = new int(10);
+   // pi is on the stack, pointing to a value on the heap. when Leak terminates,
+   // its locals on the stack, including pi, are popped. There is now no pointer
+   // that remembers where this integer value was allocated, and so it will 
+   // neve be freed. This is a memory leak.
+}
+
 void A() {
    std::unique_ptr<int> pi(new int(10));
    cout << *pi << endl;

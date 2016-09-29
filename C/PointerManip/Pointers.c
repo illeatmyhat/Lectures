@@ -7,6 +7,7 @@ int main() {
 	// CPU instructions to do integer arithmetic.
 
 	int *pToInt = &intValue;
+	printf("*pToInt = %d\n", *pToInt);
 
 	// pToInt contains the address of intValue, and when dereferenced, will read a 4-byte
 	// integer value from the address that it points to.

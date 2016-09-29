@@ -13,6 +13,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FirstClass", "FirstClass\Fi
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "BombGame", "BombGame\BombGame.fsproj", "{897B5018-7BBD-489B-8ECF-5BBAE4ED9318}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tuples", "Tuples\Tuples.fsproj", "{ABC7AA2D-EF0C-4D90-922A-7ADB723FBB47}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ClosureBindings", "ClosureBindings\ClosureBindings.fsproj", "{73183DE1-A3D2-4839-B5B9-E1C6378729DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{897B5018-7BBD-489B-8ECF-5BBAE4ED9318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{897B5018-7BBD-489B-8ECF-5BBAE4ED9318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{897B5018-7BBD-489B-8ECF-5BBAE4ED9318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC7AA2D-EF0C-4D90-922A-7ADB723FBB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC7AA2D-EF0C-4D90-922A-7ADB723FBB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC7AA2D-EF0C-4D90-922A-7ADB723FBB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC7AA2D-EF0C-4D90-922A-7ADB723FBB47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73183DE1-A3D2-4839-B5B9-E1C6378729DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73183DE1-A3D2-4839-B5B9-E1C6378729DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73183DE1-A3D2-4839-B5B9-E1C6378729DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73183DE1-A3D2-4839-B5B9-E1C6378729DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
