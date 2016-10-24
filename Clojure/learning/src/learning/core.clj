@@ -62,3 +62,5 @@
   ; logical and
   (println (when (and (< 0 x) (< x 11)) "And!")))
   ; likewise or, not
+
+(-main nil)
