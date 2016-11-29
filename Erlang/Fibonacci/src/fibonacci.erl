@@ -8,7 +8,9 @@ fib(_) -> undefined.
 
 %% Three fib numbers in serial, as three values in a list.
 fibSequential(NumCalcs, FibNum) ->
-  [fib(FibNum) || _ <- lists:seq(1, NumCalcs)].
+  [fib(FibNum), fib(FibNum), fib(FibNum)].
+
+
 
 
 

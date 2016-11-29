@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 // Perform the same work as FibSequential, but in three different threads, then
@@ -24,7 +25,8 @@ public class FibParallel {
       for (Thread t : threads) {
          try {
             t.join();
-         } catch (InterruptedException ex) {
+         }
+         catch (InterruptedException ex) {
          }
       }
       System.out.println("Results: " + results.size());
@@ -50,8 +52,8 @@ public class FibParallel {
 
       @Override
       public void run() {
-         int n = fibonacci(44);
-         synchronized(results) {
+         synchronized (results) {
+            int n = fibonacci(42);
             results.add(n);
          }
       }

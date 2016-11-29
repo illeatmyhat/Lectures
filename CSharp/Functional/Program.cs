@@ -41,7 +41,11 @@ namespace Functional {
 
          
          // Sum the budgets of the films
-         var budgetSum = disney.Select(f => (int)f["budget"]).Aggregate((sum, next) => sum + next);
+         var budgetSum = disney.Select(
+            (f) => (int)f["budget"])
+            .Aggregate(
+            (sum, next) => sum + next
+         );
          Console.WriteLine("Budgets: {0}", budgetSum);
          
          // Sort the Pixar films by budget
@@ -51,8 +55,10 @@ namespace Functional {
 
          var pixar = (
             from f in disney
-            where f["production-company"] == "Pixar"
-            orderby (int)f["budget"]);
+            where (string)f["production-company"] == "Pixar"
+            orderby (int)f["budget"]
+            select f
+         );
       }
    }
 }
