@@ -28,8 +28,27 @@ sum2([H|T], Sum, Acc) :- N is Acc + H, sum2(T, Sum, N).
 append([], L, L).
 append([H|T], L, [H|Result]) :- append(T, L, Result).
 
-evens(List) :- evens(List, []).
 evens([], []).
 evens([H|T], [H|E]) :- H rem 2 =:= 0, evens(T, E).
 evens([_|T], E) :- evens(T, E).
+
+% ordered: if the list is in nondecreasing order.
+ordered([X]). % list of 1 element is ordered.
+ordered([X,Y|T]) :- X =< Y, ordered([Y|T]). % list of at least 2 elements is ordered if the first is <= second, and rest is ordered.
+
+% quicksort: if the given list, when sorted, is equal to S.
+quicksort([X|Xs], S) :-
+	partition(Xs, X, Littles, Bigs),
+	quicksort(Littles, Ls),
+	quicksort(Bigs, Bs),
+	append(Ls, [X|Bs], S).
+quicksort([], []).
+
+% partition: if the given list, when partitioned around Y, results in
+% one list of elements smaller than Y, and one list of elements larger
+% than Y.
+partition([], Y, [], []).
+partition([X|Xs], Y, [X|Ls], Bs) :- X =< Y, partition(Xs, Y, Ls, Bs).
+partition([X|Xs], Y, Ls, [X|Bs]) :- X > Y, partition(Xs, Y, Ls, Bs).
+
 
